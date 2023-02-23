@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="rooms">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="1" name="hotel-room">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="hotel-name" type="xs:unsignedShort" />
+              <xs:element name="availability-date">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="from" type="xs:date" />
+                    <xs:element name="to" type="xs:date" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="price" type="xs:double" />
+
+
+              <xs:element name="qualifying-rates">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="qualifying-rate" minOccurs="0" maxOccurs="7">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:enumeration value="Standard" />
+                          <xs:enumeration value="Best available" />
+                          <xs:enumeration value="Non refundable rate" />
+                          <xs:enumeration value="Length of stay" />
+                          <xs:enumeration value="Family" />
+                          <xs:enumeration value="Package" />
+                          <xs:enumeration value="Corporate" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+
+              <xs:element name="hotels-rooms-types">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="room-type" minOccurs="0" maxOccurs="7">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:enumeration value="Single" />
+                          <xs:enumeration value="Double" />
+                          <xs:enumeration value="Triple" />
+                          <xs:enumeration value="Quad" />
+                          <xs:enumeration value="banquets" />
+                          <xs:enumeration value="event" />
+                          <xs:enumeration value="meeting" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+
+              <xs:element name="hotels-services">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="service" minOccurs="0" maxOccurs="8">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:enumeration value="Car rental services" />
+                          <xs:enumeration value="Catering services" />
+                          <xs:enumeration value="Concierge services" />
+                          <xs:enumeration value="Courier services" />
+                          <xs:enumeration value="Doctor on call" />
+                          <xs:enumeration value="Dry cleaning" />
+                          <xs:enumeration value="Excursions and guided tours" />
+                          <xs:enumeration value="Flower arrangement" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+              <xs:element name="hotel-rate" type="xs:double" />
+              <xs:element name="negotiation-code" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+
+</xs:schema>

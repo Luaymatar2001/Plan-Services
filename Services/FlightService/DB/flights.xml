@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flights>
+  <flight>
+    <price>1500.6</price>
+    <addresses>
+      <starting-city>string</starting-city>
+      <destination>string</destination>
+    </addresses>
+    <period>
+      <going>2002-05-30T09:00:00</going>
+      <returning>2002-05-30T09:00:00</returning>
+    </period>
+    <available-passengers-number>100</available-passengers-number>
+    <passenger-type>
+      <type>infant without a seat</type>
+   
+    </passenger-type>
+    <connecting-cities>
+      <city>string</city>
+      
+    </connecting-cities>
+    <airline>string</airline>
+    <flight-type>Business Class Flights</flight-type>
+  </flight>
+
+  <flight>
+    <price>1500.6</price>
+    <addresses>
+      <starting-city>string</starting-city>
+      <destination>string</destination>
+    </addresses>
+    <period>
+      <going>2002-05-30T09:00:00</going>
+      <returning>2002-05-30T09:00:00</returning>
+    </period>
+    <available-passengers-number>100</available-passengers-number>
+    <passenger-type>
+      <type>infant without a seat</type>
+    
+    </passenger-type>
+    <connecting-cities>
+      <city>string</city>
+ 
+    </connecting-cities>
+    <airline>string</airline>
+    <flight-type>Business Class Flights</flight-type>
+  </flight>
+
+  <flight>
+    <price>1500.6</price>
+    <addresses>
+      <starting-city>string</starting-city>
+      <destination>string</destination>
+    </addresses>
+    <period>
+      <going>2002-05-30T09:00:00</going>
+      <returning>2002-05-30T09:00:00</returning>
+    </period>
+    <available-passengers-number>100</available-passengers-number>
+    <passenger-type>
+      <type>infant without a seat</type>
+
+    </passenger-type>
+    <connecting-cities>
+      <city>string</city>
+    
+    </connecting-cities>
+    <airline>string</airline>
+    <flight-type>Business Class Flights</flight-type>
+  </flight>
+
+  <flight>
+    <price>1500.6</price>
+    <addresses>
+      <starting-city>string</starting-city>
+      <destination>string</destination>
+    </addresses>
+    <period>
+      <going>2002-05-30T09:00:00</going>
+      <returning>2002-05-30T09:00:00</returning>
+    </period>
+    <available-passengers-number>100</available-passengers-number>
+    <passenger-type>
+      <type>infant without a seat</type>
+   
+    </passenger-type>
+    <connecting-cities>
+      <city>string</city>
+
+    </connecting-cities>
+    <airline>string</airline>
+    <flight-type>Business Class Flights</flight-type>
+  </flight>
+
+  <flight>
+    <price>1500.6</price>
+    <addresses>
+      <starting-city>string</starting-city>
+      <destination>string</destination>
+    </addresses>
+    <period>
+      <going>2002-05-30T09:00:00</going>
+      <returning>2002-05-30T09:00:00</returning>
+    </period>
+    <available-passengers-number>100</available-passengers-number>
+    <passenger-type>
+      <type>infant without a seat</type>
+
+    </passenger-type>
+    <connecting-cities>
+      <city>string</city>
+    
+    </connecting-cities>
+    <airline>string</airline>
+    <flight-type>Business Class Flights</flight-type>
+  </flight>
+</flights>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions
+  xmlns="http://schemas.xmlsoap.org/wsdl/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  name="flightsService"
+  targetNamespace="http://www.examples.com/wsdl/flightsService.wsdl"
+  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+  xmlns:tns="http://www.examples.com/wsdl/flightsService.wsdl"
+  xmlns:xsd="http://www.w3.org/abdshanino"
+>
+
+
+  <xsd:types>
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="flight-request">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="username" type="xs:string" minOccurs="1" maxOccurs="1" />
+            <xs:element name="passport-number" type="xs:long" minOccurs="1" maxOccurs="1" />
+            <xs:element name="price" type="xs:double" minOccurs="1" maxOccurs="1" />
+            <xs:element name="addresses" minOccurs="1" maxOccurs="1">
+              <xs:complexType>
+                <xs:all>
+                  <xs:element name="starting-city">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string" />
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="destination">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string" />
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:all>
+              </xs:complexType>
+            </xs:element>
+
+            <xs:element name="period" minOccurs="1" maxOccurs="1">
+              <xs:complexType>
+                <xs:all>
+                  <xs:element name="going">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:dateTime" />
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="returning">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:dateTime" />
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:all>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="passenger-type" minOccurs="1" maxOccurs="1">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="type" minOccurs="0" maxOccurs="5">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:enumeration value="all" />
+                        <xs:enumeration value="adult" />
+                        <xs:enumeration value="child" />
+                        <xs:enumeration value="infant without a seat" />
+                        <xs:enumeration value="infant with a seat" />
+                        <xs:enumeration value="unaccompanied child" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="passenger-number" minOccurs="1" maxOccurs="1">
+              <xs:simpleType>
+                <xs:restriction base="xs:integer">
+                  <xs:minInclusive value="1" />
+                  <xs:maxInclusive value="10" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element name="connecting-cities" minOccurs="0" maxOccurs="1">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="city" type="xs:string" minOccurs="0" maxOccurs="5" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="preferences" minOccurs="0" maxOccurs="1">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="airline" type="xs:string" minOccurs="0" maxOccurs="1" />
+                  <xs:element name="flight-type" minOccurs="0" maxOccurs="1">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:enumeration value="Economy Class Flights" />
+                        <xs:enumeration value="Premium Economy Class Flights" />
+                        <xs:enumeration value="Business Class Flights" />
+                        <xs:enumeration value="First Class Flights" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+
+      <xs:element name="flights">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="flight">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="price" type="xs:decimal" />
+                  <xs:element name="addresses">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="starting-city" type="xs:string" />
+                        <xs:element name="destination" type="xs:string" />
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="period">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="going" type="xs:dateTime" />
+                        <xs:element name="returning" type="xs:dateTime" />
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="available-passengers-number" type="xs:unsignedByte" />
+                  <xs:element name="passenger-type">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element maxOccurs="unbounded" name="type" type="xs:string" />
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="connecting-cities">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element maxOccurs="unbounded" name="city" type="xs:string" />
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="airline" type="xs:string" />
+                  <xs:element name="flight-type" type="xs:string" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+
+
+    </xs:schema>
+  </xsd:types>
+
+  <message name="book-flight">
+    <part name="param" type="tns:flight-request" />
+  </message>
+
+  <message name="flights-list">
+    <part name="result" type="tns:flights" />
+  </message>
+
+
+  <portType name="bookFlight">
+    <operation name="book-flight">
+      <input message="tns:book-flight" />
+    </operation>
+  </portType>
+
+  <portType name="getFlights">
+    <operation name="flights">
+      <input message="tns:book-flight" />
+      <output message="tns:flights-list" />
+    </operation>
+  </portType>
+
+
+  <binding name="bookFlightSOAP" type="tns:bookFlight">
+    <soap:binding style="document"
+      transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="book-flight">
+      <soap:operation soapAction="book-flight" style="document" />
+      <input>
+        <soap:body
+          encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+          namespace="urn:examples:flightsService"
+          use="literal" />
+      </input>
+
+      <output>
+        <soap:body
+          encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+          namespace="urn:examples:flightsService"
+          use="literal" />
+      </output>
+    </operation>
+  </binding>
+
+  <binding name="getFlightsSOAP" type="tns:getFlights">
+    <soap:binding style="document"
+      transport="http://schemas.xmlsoap.org/soap/http" />
+
+    <operation name="flights">
+      <soap:operation soapAction="flights" style="document" />
+      <input>
+        <soap:body
+          encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+          namespace="urn:examples:flightsService"
+          use="literal" />
+      </input>
+
+      <output>
+        <soap:body
+          encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+          namespace="urn:examples:flightsService"
+          use="literal" />
+      </output>
+    </operation>
+
+
+  </binding>
+
+  <service name="flightsService">
+    <documentation>WSDL File for flightsService</documentation>
+    <port binding="tns:bookFlightSOAP" name="bookFlightSOAP">
+      <soap:address
+        location="http://localhost:3000/book-flight/" />
+    </port>
+
+    <port binding="tns:getFlightsSOAP" name="getFlightsSOAP">
+      <soap:address
+        location="http://localhost:3000/flights/" />
+    </port>
+
+
+  </service>
+</definitions>

@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions
+  xmlns="http://schemas.xmlsoap.org/wsdl/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  name="carRentingService"
+  targetNamespace="http://www.examples.com/wsdl/carRentingService.wsdl"
+  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+  xmlns:tns="http://www.examples.com/wsdl/carRentingService.wsdl"
+  xmlns:xsd="http://www.w3.org/abdshanino"
+>
+
+
+  <xsd:types>
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+      <xs:element name="car-rental-request">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="username" type="xs:string" minOccurs="1" maxOccurs="1" />
+            <xs:element name="passport-number" type="xs:long" minOccurs="1" maxOccurs="1" />
+            <xs:element name="price" type="xs:double" minOccurs="1" maxOccurs="1" />
+            <xs:element name="rate-code" type="xs:string" minOccurs="1" maxOccurs="1" />
+            <xs:element name="promotional-description" type="xs:string" minOccurs="1" maxOccurs="1" />
+
+
+            <!-- consider as disscount -->
+
+            <xs:element name="guest-reservation-type" minOccurs="1" maxOccurs="1">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:enumeration value="leisure" />
+                  <xs:enumeration value="corporate" /> <!-- include desscount -->
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <!-- rent from to -->
+            <xs:element name="period" minOccurs="1" maxOccurs="1">
+              <xs:complexType>
+                <xs:all>
+                  <xs:element name="rent">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:dateTime" />
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="return">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:dateTime" />
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:all>
+              </xs:complexType>
+            </xs:element>
+
+
+            <xs:element name="travel-distance-type" minOccurs="1" maxOccurs="1">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:enumeration value="limited" />
+                  <xs:enumeration value="unlimited" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+
+
+            <xs:element name="passenger-number" minOccurs="1" maxOccurs="1">
+              <xs:simpleType>
+                <xs:restriction base="xs:integer">
+                  <xs:minInclusive value="1" />
+                  <xs:maxInclusive value="4" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+
+
+            <xs:element name="preferences" minOccurs="0" maxOccurs="1">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="car-type" minOccurs="0" maxOccurs="1">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:enumeration value="Tesla" />
+                        <xs:enumeration value="BMW" />
+                        <xs:enumeration value="Ferrari" />
+                        <xs:enumeration value="Ford" />
+                        <xs:enumeration value="KIA" />
+                        <xs:enumeration value="Jeep" />
+                        <xs:enumeration value="Audi" />
+                        <xs:enumeration value="Honda" />
+                        <xs:enumeration value="Mercedes-Benz" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="special-equipment" minOccurs="0" maxOccurs="1">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:enumeration value="Child Safety Seats" />
+                        <xs:enumeration value="GPS units" />
+                        <xs:enumeration value="Mobility devices" />
+                        <xs:enumeration value="Ski racks" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+
+
+      <xs:element name="cars">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="car">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="price" type="xs:double" />
+                  <xs:element name="rate-code" type="xs:string" />
+                  <xs:element name="promotional-description" type="xs:string" />
+                  <xs:element name="guest-reservation-type" minOccurs="1" maxOccurs="1">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:enumeration value="leisure" />
+                        <xs:enumeration value="corporate" /> <!-- include desscount -->
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <!-- rent from to -->
+                  <xs:element name="period" minOccurs="1" maxOccurs="1">
+                    <xs:complexType>
+                      <xs:all>
+                        <xs:element name="rent">
+                          <xs:simpleType>
+                            <xs:restriction base="xs:dateTime" />
+                          </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="return">
+                          <xs:simpleType>
+                            <xs:restriction base="xs:dateTime" />
+                          </xs:simpleType>
+                        </xs:element>
+                      </xs:all>
+                    </xs:complexType>
+                  </xs:element>
+
+
+                  <xs:element name="travel-distance-type" minOccurs="1" maxOccurs="1">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:enumeration value="limited" />
+                        <xs:enumeration value="unlimited" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+
+                  <xs:element name="passenger-number" minOccurs="1" maxOccurs="1">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:integer">
+                        <xs:minInclusive value="1" />
+                        <xs:maxInclusive value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="preferences">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="car-type" minOccurs="0" maxOccurs="1">
+                          <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                              <xs:enumeration value="Tesla" />
+                              <xs:enumeration value="BMW" />
+                              <xs:enumeration value="Ferrari" />
+                              <xs:enumeration value="Ford" />
+                              <xs:enumeration value="KIA" />
+                              <xs:enumeration value="Jeep" />
+                              <xs:enumeration value="Audi" />
+                              <xs:enumeration value="Honda" />
+                              <xs:enumeration value="Mercedes-Benz" />
+                            </xs:restriction>
+                          </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="special-equipments">
+                          <xs:complexType>
+                            <xs:sequence>
+                              <xs:element maxOccurs="4" name="equipment">
+                                <xs:simpleType>
+                                  <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Child Safety Seats" />
+                                    <xs:enumeration value="GPS units" />
+                                    <xs:enumeration value="Mobility devices" />
+                                    <xs:enumeration value="Ski racks" />
+                                  </xs:restriction>
+                                </xs:simpleType>
+                              </xs:element>
+                            </xs:sequence>
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+
+
+    </xs:schema>
+  </xsd:types>
+
+  <message name="carRentalRequest">
+    <part name="param" type="xsd:car-rental-request" />
+  </message>
+
+  <message name="cars-list">
+    <part name="result" type="xsd:cars" />
+  </message>
+
+
+  <portType name="rent-cars">
+    <operation name="rent-car">
+      <input message="tns:carRentalRequest" />
+    </operation>
+  </portType>
+
+  <portType name="cars">
+    <operation name="cars">
+      <input message="tns:carRentalRequest" />
+      <output message="tns:cars-list" />
+    </operation>
+  </portType>
+
+
+  <binding name="rentCarSOAP" type="tns:rent-cars">
+    <soap:binding style="document"
+      transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="rent-car">
+      <soap:operation soapAction="rent-car" style="document" />
+      <input>
+        <soap:body
+          encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+          namespace="urn:examples:carRentingService"
+          use="literal" />
+      </input>
+
+      <output>
+        <soap:body
+          encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+          namespace="urn:examples:carRentingService"
+          use="literal" />
+      </output>
+    </operation>
+  </binding>
+
+  <binding name="getCarsSOAP" type="tns:cars">
+    <soap:binding style="document"
+      transport="http://schemas.xmlsoap.org/soap/http" />
+
+    <operation name="cars">
+      <soap:operation soapAction="cars" style="document" />
+      <input>
+        <soap:body
+          encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+          namespace="urn:examples:carRentingService"
+          use="literal" />
+      </input>
+
+      <output>
+        <soap:body
+          encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+          namespace="urn:examples:carRentingService"
+          use="literal" />
+      </output>
+    </operation>
+
+
+  </binding>
+
+
+  <service name="carRentingService">
+    <documentation>WSDL File for carRentingService</documentation>
+    <port binding="tns:rentCarSOAP" name="rentCarSOAP">
+      <soap:address
+        location="http://localhost:3001/rent-car/" />
+    </port>
+    <port binding="tns:getCarsSOAP" name="getCarsSOAP">
+      <soap:address
+        location="http://localhost:3001/cars/" />
+    </port>
+
+  </service>
+</definitions>

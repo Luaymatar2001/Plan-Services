@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="flight-request">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="username" type="xs:string" minOccurs="1" maxOccurs="1" />
+        <xs:element name="passport-number" type="xs:long" minOccurs="1" maxOccurs="1" />
+        <xs:element name="price" type="xs:double" minOccurs="1" maxOccurs="1" />
+        <xs:element name="addresses" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="starting-city">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="destination">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+            </xs:all>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="period" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="going">
+                <xs:simpleType>
+                  <xs:restriction base="xs:dateTime" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="returning">
+                <xs:simpleType>
+                  <xs:restriction base="xs:dateTime" />
+                </xs:simpleType>
+              </xs:element>
+            </xs:all>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="passenger-type" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="type" minOccurs="0" maxOccurs="5">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="all" />
+                    <xs:enumeration value="adult" />
+                    <xs:enumeration value="child" />
+                    <xs:enumeration value="infant without a seat" />
+                    <xs:enumeration value="infant with a seat" />
+                    <xs:enumeration value="unaccompanied child" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="passenger-number" minOccurs="1" maxOccurs="1">
+          <xs:simpleType>
+            <xs:restriction base="xs:integer">
+              <xs:minInclusive value="1" />
+              <xs:maxInclusive value="10" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="connecting-cities" minOccurs="0" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="city" type="xs:string" minOccurs="0" maxOccurs="5" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="preferences" minOccurs="0" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="airline" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="flight-type" minOccurs="0" maxOccurs="1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="Economy Class Flights" />
+                    <xs:enumeration value="Premium Economy Class Flights" />
+                    <xs:enumeration value="Business Class Flights" />
+                    <xs:enumeration value="First Class Flights" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

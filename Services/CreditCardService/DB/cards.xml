@@ -1,0 +1,49 @@
+<cards>
+  <credit-card-request>
+    <card-owner-name>Ali Ahmed</card-owner-name>
+    <card-number>4652013084003</card-number>
+    <card-expiration-date>2025-01-16</card-expiration-date>
+    <card-cvv>500</card-cvv>
+    <card-type>Visa Card</card-type>
+    <balance>5500</balance>
+  </credit-card-request>
+
+  <credit-card-request>
+    <card-owner-name>Bahaa Ahmed</card-owner-name>
+    <card-number>4123912304290</card-number>
+    <card-expiration-date>2024-07-11</card-expiration-date>
+    <card-cvv>100</card-cvv>
+    <card-type>Master Card</card-type>
+    <balance>420</balance>
+
+  </credit-card-request>
+
+
+  <credit-card-request>
+    <card-owner-name>Mohammed Ali</card-owner-name>
+    <card-number>4621359814726</card-number>
+    <card-expiration-date>2028-04-22</card-expiration-date>
+    <card-cvv>200</card-cvv>
+    <card-type>Visa Card</card-type>
+    <balance>10</balance>
+
+  </credit-card-request>
+
+  <credit-card-request>
+    <card-owner-name>Ahmed Salah</card-owner-name>
+    <card-number>4625981473219</card-number>
+    <card-expiration-date>2030-05-15</card-expiration-date>
+    <card-cvv>300</card-cvv>
+    <card-type>Visa Card</card-type>
+    <balance>5500</balance>
+  </credit-card-request>
+
+  <credit-card-request>
+    <card-owner-name>Khalid Taha</card-owner-name>
+    <card-number>1235821642597</card-number>
+    <card-expiration-date>2030-05-02</card-expiration-date>
+    <card-cvv>400</card-cvv>
+    <card-type>Master Card</card-type>
+    <balance>2500</balance>
+  </credit-card-request>
+</cards>

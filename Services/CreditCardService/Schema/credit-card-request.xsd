@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="credit-card-request">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="card-owner-name" type="xs:string" minOccurs="1" maxOccurs="1" />
+        <xs:element name="card-number" type="xs:long" minOccurs="1" maxOccurs="1" />
+        <xs:element name="card-expiration-date" type="xs:date" minOccurs="1" maxOccurs="1" />
+        <xs:element name="card-cvv" minOccurs="1" maxOccurs="1">
+          <xs:simpleType>
+            <xs:restriction base="xs:integer">
+              <xs:minInclusive value="111" />
+              <xs:maxInclusive value="999" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="card-type" minOccurs="1" maxOccurs="1">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Visa" />
+              <xs:enumeration value="Master Card" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="balance-deduction" type="xs:double" minOccurs="0" maxOccurs="1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cars>
+  <car>
+    <price>-8798599999999.77</price>
+    <rate-code>string</rate-code>
+    <promotional-description>string</promotional-description>
+    <guest-reservation-type>leisure</guest-reservation-type>
+    <period>
+      <rent>2005-11-01T04:26:57.39</rent>
+      <return>2012-01-14T08:44:21.32</return>
+    </period>
+    <travel-distance-type>limited</travel-distance-type>
+    <passenger-number>3</passenger-number>
+    <preferences>
+      <car-type>Audi</car-type>
+      <special-equipments>
+        <equipment>Ski racks</equipment>
+        <equipment>GPS units</equipment>
+      </special-equipments>
+    </preferences>
+  </car>
+
+  <car>
+    <price>-8798599999999.77</price>
+    <rate-code>string</rate-code>
+    <promotional-description>string</promotional-description>
+    <guest-reservation-type>leisure</guest-reservation-type>
+    <period>
+      <rent>2005-11-01T04:26:57.39</rent>
+      <return>2012-01-14T08:44:21.32</return>
+    </period>
+    <travel-distance-type>limited</travel-distance-type>
+    <passenger-number>3</passenger-number>
+    <preferences>
+      <car-type>Audi</car-type>
+      <special-equipments>
+        <equipment>Ski racks</equipment>
+        <equipment>GPS units</equipment>
+      </special-equipments>
+    </preferences>
+  </car>
+
+  <car>
+    <price>-8798599999999.77</price>
+    <rate-code>string</rate-code>
+    <promotional-description>string</promotional-description>
+    <guest-reservation-type>leisure</guest-reservation-type>
+    <period>
+      <rent>2005-11-01T04:26:57.39</rent>
+      <return>2012-01-14T08:44:21.32</return>
+    </period>
+    <travel-distance-type>limited</travel-distance-type>
+    <passenger-number>3</passenger-number>
+    <preferences>
+      <car-type>Audi</car-type>
+      <special-equipments>
+        <equipment>Ski racks</equipment>
+        <equipment>GPS units</equipment>
+      </special-equipments>
+    </preferences>
+  </car>
+
+  <car>
+    <price>-8798599999999.77</price>
+    <rate-code>string</rate-code>
+    <promotional-description>string</promotional-description>
+    <guest-reservation-type>leisure</guest-reservation-type>
+    <period>
+      <rent>2005-11-01T04:26:57.39</rent>
+      <return>2012-01-14T08:44:21.32</return>
+    </period>
+    <travel-distance-type>limited</travel-distance-type>
+    <passenger-number>3</passenger-number>
+    <preferences>
+      <car-type>Audi</car-type>
+      <special-equipments>
+        <equipment>Ski racks</equipment>
+        <equipment>GPS units</equipment>
+      </special-equipments>
+    </preferences>
+  </car>
+
+  <car>
+    <price>-8798599999999.77</price>
+    <rate-code>string</rate-code>
+    <promotional-description>string</promotional-description>
+    <guest-reservation-type>leisure</guest-reservation-type>
+    <period>
+      <rent>2005-11-01T04:26:57.39</rent>
+      <return>2012-01-14T08:44:21.32</return>
+    </period>
+    <travel-distance-type>limited</travel-distance-type>
+    <passenger-number>3</passenger-number>
+    <preferences>
+      <car-type>Audi</car-type>
+      <special-equipments>
+        <equipment>Ski racks</equipment>
+        <equipment>GPS units</equipment>
+      </special-equipments>
+    </preferences>
+  </car>
+
+  <car>
+    <price>40468700000000.2</price>
+    <rate-code>string</rate-code>
+    <promotional-description>string</promotional-description>
+    <guest-reservation-type>leisure</guest-reservation-type>
+    <period>
+      <rent>2008-04-28T23:30:17.59</rent>
+      <return>1988-05-27T07:47:55.44</return>
+    </period>
+    <travel-distance-type>limited</travel-distance-type>
+    <passenger-number>3</passenger-number>
+    <preferences>
+      <special-equipments>
+        <equipment>Child Safety Seats</equipment>
+        <equipment>Ski racks</equipment>
+        <equipment>GPS units</equipment>
+      </special-equipments>
+    </preferences>
+  </car>
+
+</cars>

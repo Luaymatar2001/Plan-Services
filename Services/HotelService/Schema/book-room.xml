@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="hotel-reservation-request">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="username" type="xs:string" minOccurs="1" maxOccurs="1" />
+        <xs:element name="price" type="xs:double" minOccurs="1" maxOccurs="1" />
+        <xs:element name="passport-number" type="xs:long" minOccurs="1" maxOccurs="1" />
+        <xs:element name="period" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="from">
+                <xs:simpleType>
+                  <xs:restriction base="xs:date" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="to">
+                <xs:simpleType>
+                  <xs:restriction base="xs:date" />
+                </xs:simpleType>
+              </xs:element>
+            </xs:all>
+          </xs:complexType>
+        </xs:element>
+
+
+        <xs:element name="room-type" minOccurs="1" maxOccurs="1">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Single" />
+              <xs:enumeration value="Double" />
+              <xs:enumeration value="Triple" />
+              <xs:enumeration value="Quad" />
+              <xs:enumeration value="banquets" />
+              <xs:enumeration value="event" />
+              <xs:enumeration value="meeting" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+
+
+        <xs:element name="qualifying-rates" minOccurs="1" maxOccurs="1">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Standard" />
+              <xs:enumeration value="Best available" />
+              <xs:enumeration value="Non refundable rate" />
+              <xs:enumeration value="Length of stay" />
+              <xs:enumeration value="Family" />
+              <xs:enumeration value="Package" />
+              <xs:enumeration value="Corporate" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

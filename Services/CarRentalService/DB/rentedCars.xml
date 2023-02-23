@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reservations>
+  <book>
+    <username>abd</username>
+    <passport-number>3</passport-number>
+    <price>14022400000000.2</price>
+    <rate-code>string</rate-code>
+    <promotional-description>string</promotional-description>
+    <guest-reservation-type>leisure</guest-reservation-type>
+    <period>
+      <rent>2014-05-17T20:23:41.03</rent>
+      <return>1972-11-23T08:28:26.02</return>
+    </period>
+    <travel-distance-type>unlimited</travel-distance-type>
+    <passenger-number>3</passenger-number>
+    <preferences>
+      <car-type>Ferrari</car-type>
+      <special-equipment>Child Safety Seats</special-equipment>
+    </preferences>
+  </book>
+</reservations>

@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Freelancer - Start Bootstrap Theme</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">
+
+        </script>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<!-- <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'></link>           -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>   -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top">Travel services</a>
+                <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Flight</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">Car</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Hotel</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                <!-- Masthead Avatar Image-->
+                <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..." />
+                <!-- Masthead Heading-->
+                <h1 class="masthead-heading text-uppercase mb-0">Travel services
+                </h1>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Masthead Subheading-->
+                <p class="masthead-subheading font-weight-light mb-0">Graphic Artist - Web Designer - Illustrator</p>
+            </div>
+        </header>
+        <!-- Portfolio Section-->
+        <section class="page-section portfolio" id="portfolio">
+            <div class="container">
+                <!-- Portfolio Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Flight Times</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Grid Items-->
+                <!-- http://localhost:3002/rooms/ -->
+                <!-- <table class="table table-striped"> -->
+                
+                     
+                    <table  style="font-size: large; font-weight: bold;"  class="table table-bordered">
+                       <thead>
+                          <tr>
+                            <th scope="col">#Select Time Flight</th>
+                            <th scope="col">price</th>
+                            <th scope="col">addresses</th>
+                            <th scope="col">period</th>
+                            <th scope="col">vailable passengers number</th>
+                            <th scope="col">assenger type</th>
+                            <th scope="col">connect cities</th>
+                            <th scope="col">airline</th>
+                            <th scope="col">flight type</th>
+                        </tr>
+                    </thead>
+                    <tbody id="append1">
+                    
+                    
+                    </tbody>
+                  </table>
+                
+            </div>
+            <div class="text-center mt-4" >
+                <button type="button" class="btn btn-xl btn-outline-light" id="BookPlan" style="background-color: #007bff;"  >
+                    <i class="fas fa-download me-2"></i>
+                    Book a plane
+                </a>
+            </div>
+            
+        </section>
+   
+        <!-- About Section-->
+        <section class="page-section bg-primary text-white mb-0" id="about">
+            <div class="container">
+                <!-- Contact Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Car services</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+            <table style="font-size: large; font-weight: bold;" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">price</th>
+                        <th scope="col">rate code</th>
+                        <th scope="col">Promotional description</th>
+                        <th scope="col">Guest reservation type</th>
+                        <th scope="col">period</th>
+                        <th scope="col">Travel distance type</th>
+                        <th scope="col">Passenger number</th>
+                        <th scope="col">car-type</th>
+                        <th scope="col">special equipment</th>
+                     
+                    </tr>
+                  
+                </thead>
+                <tbody id="append2">
+                
+                
+                </tbody>
+              </table>
+            
+        </div>
+                <!-- About Section Button-->
+                <div class="text-center mt-4">
+                    <button class="btn btn-xl btn-outline-light" id="BookCar" type="button">
+                        <i class="fas fa-download me-2"></i>
+                        Book a Car
+                    </button>
+                </div>
+            </div>
+        </div>
+        </section>
+        <!-- Contact Section-->
+        <section class="page-section" id="contact">
+            <div class="container">
+                <!-- Contact Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Hotel services</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Contact Section Form-->
+                <table style="font-size: large; font-weight: bold;"  class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">hotel-name</th>
+                            <th scope="col">availability date from</th>
+                            <th scope="col">availability date to</th>
+                            <th scope="col">price</th>
+                            <th scope="col">qualifying rate</th>
+                            <th scope="col">room-type</th>
+                            <th scope="col">hotel-rate</th>
+                            <th scope="col">negotiation-code</th>                            
+                        </tr>
+                      
+                    </thead>
+                    <tbody id="append3">
+                    
+                    
+                    </tbody>
+                  </table>
+                
+            </div>
+                    <!-- About Section Button-->
+                    <div class="text-center mt-4 ">
+                    
+                        <button class="btn btn-xl btn-outline-light" id="BookHotel" style="background-color: #007bff;" type="button">
+                            <i class="fas fa-download me-2"></i>
+                            Book a Hotel
+                        </button>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+ <!-- Contact Section-->
+ <section class="page-section" id="AddCard">
+    <div class="container">
+        <!-- Contact Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Add Cards</h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-xl-7">
+                <!-- * * * * * * * * * * * * * * *-->
+                <!-- * * SB Forms Contact Form * *-->
+                <!-- * * * * * * * * * * * * * * *-->
+                <!-- This form is pre-integrated with SB Forms.-->
+                <!-- To make this form functional, sign up at-->
+                <!-- https://startbootstrap.com/solution/contact-forms-->
+                <!-- to get an API token!-->
+                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                    <!-- Name input-->
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="card_owner_name" type="text" placeholder="Enter your card owner name..." data-sb-validations="required" />
+                        <label for="card_owner_name">card owner name</label>
+                        <div class="invalid-feedback" data-sb-feedback="card_owner_name:required">A card owner name is required.</div>
+                    </div>  
+
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="passport_number" type="text" placeholder="Enter your passport number..." data-sb-validations="required" />
+                        <label for="passport_number">passport number</label>
+                        <div class="invalid-feedback" data-sb-feedback="passport_number:required">A passport number is required.</div>
+                    </div>  
+                    
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="card_number" type="text" placeholder="Enter your card umber..." data-sb-validations="required" />
+                        <label for="card_number">card number</label>
+                        <div class="invalid-feedback" data-sb-feedback="card_number:required">A card number is required.</div>
+                    </div> 
+                    
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="card_expiration_date" type="date" placeholder="Enter your card expiration date..." data-sb-validations="required" />
+                        <label for=" card_expiration_date"> card expiration date</label>
+                        <div class="invalid-feedback" data-sb-feedback="card_expiration_date:required">A card expiration date is required.</div>
+                    </div>  
+                    
+
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="card_cvv" type="text" placeholder="Enter your card cvv..." data-sb-validations="required" />
+                        <label for=" card_cvv"> card cvv</label>
+                        <div class="invalid-feedback" data-sb-feedback="card_cvv:required">A card cvv is required.</div>
+                    </div>  
+
+
+                    <label for=" card_type"> card type</label>
+                 
+                    <div class="form mb-3">
+                        
+                        <select class="form-control" id="card_type" placeholder="Enter your card type..." data-sb-validations="required">
+                           <option value="Visa">  Master Card  </option>
+                           <option value="Visa"> Prepaid Card </option>
+                           <option value="Visa"> PayPal </option>
+                           <option value="Visa">  STC Pay </option>
+                           <option value="Visa" selected>Visa Card </option>
+                        </select>
+                        <div class="invalid-feedback" data-sb-feedback="card_type:required">A card type is required.</div>
+                    </div>  
+                 
+                    <button class="btn btn-primary btn-xl " data-toggle="modal" data-target="#exampleModal" id="submitButton" type="button">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+      <!--script1-->
+        <script>
+            var soapMessage = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">'+
+                '<soapenv:Header/>'+
+                '<soapenv:Body>'+
+                ' </soapenv:Body>'+
+                '</soapenv:Envelope>';
+                const checkNF = [];
+                const dataF = [];
+                    $.ajax({
+                        url:"http://localhost:3000/flights/",
+                        type: "POST",
+                        dataType: "xml", 
+                        data: soapMessage, 
+                        processData: false,
+                        contentType: "text/xml; charset=\"utf-8\"",
+                        success: function (data) {
+                               
+                           let customCheckF = 0;
+                          
+                            $(data).find("flight").each(function () {  
+                                checkNF[customCheckF]=customCheckF;
+                                dataF[customCheckF] = [
+                                    $(this).find('price').text(),
+                                $(this).find('addresses').text(),
+                                $(this).find('period').text(),
+                                $(this).find('available-passengers-number').text(),
+                                $(this).find('passenger-type').text(),
+                                $(this).find('connecting-cities').text(),
+                                $(this).find('airline').text(),
+                                $(this).find('flight-type').text()
+                            ];
+                                //   +$(this).find('price').text()+
+                                $('#append1').append('<tr><td> <div class="custom-control custom-checkbox">'+
+                                    ' <input type="checkbox" class="custom-control-input" id="customCheck'+customCheckF+'" >'+
+                                    ' <label class="custom-control-label" for="customCheck'+customCheckF+'">'+customCheckF+'</label>'+
+                                    ' </div></td>'+
+                                    ' <td>'+$(this).find('price').text()+'</td>'+
+                                    ' <td>'+$(this).find('addresses').text()
+                                        +'</td>'+
+                                     ' <td>'+$(this).find('period').text()+'</td>'+
+                                     ' <td>'+$(this).find('available-passengers-number').text()+'</td>'+
+                                     ' <td>'+$(this).find('passenger-type').text()+'</td>'+
+                                     ' <td>'+$(this).find('connecting-cities').text()+'</td>'+
+                                     ' <td>'+$(this).find('airline').text()+'</td>'+
+                                     ' <td>'+$(this).find('flight-type').text()+'</td>'+
+                                    ' </tr>');
+
+                                    customCheckF++;
+                                                    
+                                })
+                               
+                        }, 
+                    
+                        error: function () {
+                            swal("connection error flight!", "Try again later!", "error");
+                        }, 
+                            })
+            
+            
+            
+            
+                      var soapMessage1 = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">'+
+                      '<soapenv:Header/>'+
+                      '<soapenv:Body>'+
+                      '<param/>'+
+                      '</soapenv:Body>'+
+                      '</soapenv:Envelope>';
+                      const checkNC = [];
+                const dataC = [];
+                    $.ajax({
+                        url:"http://localhost:3001/cars/",
+                        type: "POST",
+                        dataType: "xml", 
+                        data: soapMessage1, 
+                        processData: false,
+                        contentType: "text/xml; charset=\"utf-8\"",
+                        success: function (data) {
+
+                            
+                                
+                            let customCheckC = 0;
+                         
+                            $(data).find("car").each(function () {
+                                
+                                     
+                                checkNC[customCheckC]=customCheckC;
+                                dataC[customCheckC] = [
+                                $(this).find('price').text(),
+                                $(this).find('rate-code').text(),
+                                $(this).find('promotional-description').text(),
+                                $(this).find('available-passengers-number').text(),
+                                $(this).find('guest-reservation-type').text(),
+                                $(this).find('period').text(),
+                                $(this).find('travel-distance-type').text(),
+                                $(this).find('passenger-number').text(),
+                                $(this).find('car-type').text(),
+                                $(this).find('special-equipments').eq(0).text()
+
+                            ];
+
+                                let equipments = $(this).find('special-equipments').eq(0).text();
+                                //   +$(this).find('price').text()+
+                                $('#append2').append('<tr><td> <div class="custom-control custom-checkbox">'+
+                                    ' <input type="checkbox" class="custom-control-input" id="customCheckC'+customCheckC+'" >'+
+                                    ' <label class="custom-control-label" for="customCheckC'+customCheckC+'">'+customCheckC+'</label>'+
+                                    ' </div></td>'+
+                                    ' <td>'+$(this).find('price').text()+'</td>'+
+                                    ' <td>'+$(this).find('rate-code').text()
+                                        +'</td>'+
+                                     ' <td>'+$(this).find('promotional-description').text()+'</td>'+
+                                     ' <td>'+$(this).find('guest-reservation-type').text()+'</td>'+
+                                     ' <td>'+$(this).find('period').text()+'</td>'+
+                                     ' <td>'+$(this).find('travel-distance-type').text()+'</td>'+
+                                     ' <td>'+$(this).find('passenger-number').text()+'</td>'+
+                                     ' <td>'+$(this).find('car-type').text()+'</td>'+
+                                     ' <td>'+equipments+'</td>'+
+            
+                                    ' </tr>');
+                                    customCheckC++;
+                                })
+                               
+                        }, 
+                    
+                        error: function () {
+                            swal("connection error Car!", "Try again later!", "error");
+                        }, 
+                            })
+
+                     var soapMessage2 = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">'+
+                      '<soapenv:Header/>'+
+                      '<soapenv:Body>'+
+                      '<param/>'+
+                      '</soapenv:Body>'+
+                      '</soapenv:Envelope>';
+                     let checkNH = [];
+                     let dataH =[];
+                    $.ajax({
+                        url:"http://localhost:3002/rooms/",
+                        type: "POST",
+                        dataType: "xml", 
+                        data: soapMessage2, 
+                        processData: false,
+                        contentType: "text/xml; charset=\"utf-8\"",
+                        success: function (data) {
+                         let customCheckH = 0;
+                            $(data).find("hotel-room").each(function () {
+                                               
+                                checkNH[customCheckH]=customCheckH;
+                                dataH[customCheckH] = [
+                                $(this).find('hotel-name').text(),
+                                $(this).find('from').text(),
+                                $(this).find('to').text(),
+                                $(this).find('price').text(),
+                                $(this).find('qualifying-rate').text(),
+                                $(this).find('hotels-rooms-types').text(),
+                                $(this).find('travel-distance-type').text(),
+                                $(this).find('hotel-rate').text(),
+                                $(this).find('negotiation-code').text()
+
+                            ];
+                                //   +$(this).find('price').text()+
+                                $('#append3').append('<tr><td> <div class="custom-control custom-checkbox">'+
+                                    ' <input type="checkbox" class="custom-control-input" id="customCheckH'+customCheckH+'" >'+
+                                    ' <label class="custom-control-label" for="customCheckH'+customCheckH+'">'+customCheckH+'</label>'+
+                                    ' </div></td>'+
+                                    ' <td>'+$(this).find('hotel-name').text()+'</td>'+
+                                    ' <td>'+$(this).find('from').text()
+                                        +'</td>'+
+                                     ' <td>'+$(this).find('to').text()+'</td>'+
+                                     ' <td>'+$(this).find('price').text()+'</td>'+
+                                     ' <td>'+$(this).find('qualifying-rate').text()+'</td>'+
+                                     ' <td>'+$(this).find('hotels-rooms-types').text()+'</td>'+
+                                     ' <td>'+$(this).find('hotel-rate').text()+'</td>'+
+                                     ' <td>'+$(this).find('negotiation-code').text()+'</td>'+
+                                    
+                                    ' </tr>');
+                                    customCheckH++;
+                                })
+                               
+                        }, 
+                    
+                        error: function () {
+                            swal("connection error Hotel!", "Try again later!", "error");
+                        }, 
+                            })
+
+
+                            // if (dataH.length === 0) { console.log("Array is empty!") }
+                   let arrFlight = [];
+                   let arrCar = [];
+                   let arrHotel = [];
+
+                   $('#BookPlan').click(function(){
+                                let count = 0;
+                for (let index = 0; index<dataF.length; index++) {
+                    if ($("#customCheck"+index+"").prop('checked') == true) {
+                        arrFlight[count]= dataF[index];
+                        count++;
+                }      
+                } 
+         
+                swal({
+                    title: "Good job!",
+                    text:"succeeded in deporting ("+arrFlight.length+") \nWe are waiting for adding a card to approve the reservation" ,
+                    icon: "success",
+                    button: "Move to the next service",
+                    }) .then(function() {
+                        window.location.href = "#about";
+               });
+
+               });
+
+                   $('#BookCar').click(function(){
+                    let count = 0;
+                for (let index = 0; index<dataC.length; index++) {
+                    
+                    if ($("#customCheckC"+index+"").prop('checked') == true) {
+                        arrCar[count]= dataC[index];
+                }      
+                }
+
+                swal({
+                    title: "Good job!",
+                    text:"succeeded in deporting ("+arrCar.length+") \nWe are waiting for adding a card to approve the reservation" ,
+                    icon: "success",
+                    button: "Move to the next service",
+                    }) .then(function() {
+                        window.location.href = "#contact";
+                        console.log(arrHotel);
+
+               });
+
+               });
+                    
+               $('#BookHotel').click(function(){
+                                let count = 0;
+                for (let index = 0; index<dataH.length; index++) {
+                    if ($("#customCheckH"+index+"").prop('checked') == true) {
+                        arrHotel[count]= dataH[index];
+                        count++;
+                }      
+                } 
+                swal({
+                    title: "Good job!",
+                    text:"succeeded in deporting ("+arrCar.length+") \nWe are waiting for adding a card to approve the reservation" ,
+                    icon: "success",
+                    button: "Move to the next service",
+                    }) .then(function() {
+                        window.location.href = "#AddCard";
+
+               });
+               });
+
+              
+
+
+              
+              let TotalPrice = 0;
+               function GoodBookFlight(arr , username , passport) {
+               let soapMessageArr =[];
+                        for (let index = 0; index < arr.length; index++) {
+                            TotalPrice = arr[0];
+                            let substringsAddresses = (arr[index][1]+"").split(/\s+/);
+                            let substringsPeriod = (arr[index][2]+"").split(/\s+/);
+                            let substringsCity = (arr[index][5]+"").split(/\s+/);
+                             soapMessage[index] = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">'+
+                            ' <soapenv:Header/>'+
+               ' <soapenv:Body>'+
+                '   <param>'+
+                  ' <flight-request>'+
+                        ' <username>'+username+'</username>'+
+                        '<passport-number>'+passport+'</passport-number>'+
+                        '<price>'+arr[0]+'</price>'+
+                        ' <addresses>'+
+                            '   <starting-city>'+substringsAddresses[1]+'</starting-city>'+
+                           '   <destination>'+substringsAddresses[2]+'</destination>'+
+                           ' </addresses>'+
+                        ' <period>'+
+                            ' <going>'+substringsPeriod[1]+'</going>'+
+                           ' <returning>'+substringsPeriod[2]+'</returning>'+
+                           '  </period>'+
+                        '  <passenger-type>'+
+                            '     <type>'+arr[index][4]+'</type>'+
+                           '   </passenger-type>'+
+                        '   <passenger-number>'+arr[index][3]+'</passenger-number>'+
+                        '   <connecting-cities>'+
+                            '      <city>'+substringsCity[1]+'</city>'+
+                           '   </connecting-cities>'+
+                        '   <preferences>'+
+                            '      <airline>'+arr[index][6]+'</airline>'+
+                           '      <flight-type>'+arr[index][7]+'</flight-type>'+
+                           '    </preferences>'+
+                        '    </flight-request>'+
+                     '   </param>'+
+                  ' </soapenv:Body>'+
+               '</soapenv:Envelope>';
+                        }
+                           
+               return soapMessageArr;
+               }
+
+               function GoodBookCar(aarr , username , passport) {
+                let soapMessageArr =[];
+                for (let index = 0; index < arr.length; index++) {
+                    TotalPrice =arr[0];
+                    let substringsPeriod = (arr[index][5]+"").split(/\s+/);
+                    let substringsEquip = (arr[index][9]+"").split(/\s+/);
+                    soapMessageArr[index] = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">'+
+                    '<soapenv:Header/>'+
+            '<soapenv:Body>'+
+                '<param>'+
+                '    <car-rental-request>'+
+                        ' <username>'+username+'</username>'+
+                        ' <passport-number>'+passport+'</passport-number>'+
+                        '  <price>'+arr[0]+'</price>'+
+                        '   <rate-code>'+arr[1]+'</rate-code>'+
+                        '  <promotional-description>'+arr[2]+'</promotional-description>'+
+                        '  <guest-reservation-type>'+arr[4]+'</guest-reservation-type>'+
+                        '  <period>'+
+                            '    <rent>'+substringsPeriod[1]+'</rent>'+
+                        '     <return>'+substringsPeriod[2]+'</return>'+
+                        '  </period>'+
+                        '   <travel-distance-type>'+arr[6]+'</travel-distance-type>'+
+                        '    <passenger-number>'+arr[7]+'</passenger-number>'+
+                        '    <preferences>'+
+                            '   <car-type>'+arr[8]+'</car-type>'+
+                            '   <special-equipment>'+substringsEquip[1]+'</special-equipment>'+
+                        '    </preferences>'+
+                     '   </car-rental-request>'+
+                    '     </param>'+
+                '  </soapenv:Body>'+
+            '</soapenv:Envelope>';
+
+                        }
+                return soapMessageArr;
+            }
+
+
+            function GoodBookHotel(arr , username , passport) {
+                let soapMessageArr =[];
+                for (let index = 0; index < arr.length; index++) {
+                    TotalPrice = arr[3];
+                    let substringsRoomType = (arr[index][5]+"").split(/\s+/);
+                  //  let substringsEquip = (arr[index][9]+"").split(/\s+/);
+                  soapMessageArr[index] = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">'+
+                    '<soapenv:Header/>'+
+                    '<soapenv:Body>'+
+                        '<param>'+
+                        ' <hotel-reservation-request>'+
+                        ' <username>'+username+'</username>'+
+                        ' <passport-number>'+passport+'</passport-number>'+
+                    '  <period>'+
+                       '   <from>'+arr[1]+'</from>'+
+                        '  <to>'+arr[2]+'</to>'+
+                      ' </period>'+
+             ' <price-range>'+
+              '   <from>'+arr[3]+'</from>'+
+              '   <to>'+arr[7]+'</to>'+
+              '</price-range>'+
+               '<room-type>'+substringsRoomType[1]+'</room-type>'+
+            ' <qualifying-rates>'+arr[4]+'</qualifying-rates>'+
+           '</hotel-reservation-request>'+
+       '   </param>'+
+    ' </soapenv:Body>'+
+'</soapenv:Envelope>';
+            }
+            return soapMessageArr;
+        }
+
+          
+        $('#submitButton').click(function(){
+     let username = $('#card_owner_name').val() ;
+     let passport =  $('#passport_number').val() ;
+     
+               var soapMessage3 = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">'+           
+                '<soapenv:Header/>'+
+            ' <soapenv:Body>'+
+                '   <param>'+
+                '     <credit-card-request>'+
+        '         <card-owner-name>'+username+'</card-owner-name>'+
+        '     <card-number>'+ $('#card_number').val() +'</card-number>'+
+            '           <card-expiration-date>'+ $('#card_expiration_date').val() +'</card-expiration-date>'+
+            '       <card-cvv>'+ $('#card_cvv').val() +'</card-cvv>'+
+            '       <card-type>'+ $('#card_type').val() +'</card-type>'+
+            '<balance>'+TotalPrice+'</balance>'+
+            '     </credit-card-request>'+
+            '   </param>'+
+            ' </soapenv:Body>'+
+        '</soapenv:Envelope>';
+                  
+                    $.ajax({
+                        url:"http://localhost:3003/card-validation/",
+                        type: "POST",
+                        dataType: "xml", 
+                        data: soapMessage3, 
+                        processData: false,
+                        contentType: "text/xml; charset=\"utf-8\"",
+                        success: function (data) {
+                            let flagF = 0;
+                            let flagC = 0;
+                            let flagH = 0;
+                        let Flight = GoodBookFlight();
+                        let Car = GoodBookCar();
+                        let Hotel = GoodBookHotel();
+
+                              if (Flight.length !=0) {
+                         for (let index = 0; index < Flight.length; index++) {
+                                    $.ajax({
+                                        url:"http://localhost:3000/book-flight/",
+                                        type: "POST",
+                                        dataType: "xml", 
+                                        data: Flight[index], 
+                                        processData: false,
+                                        contentType: "text/xml; charset=\"utf-8\"",
+                                        success: function (data) {
+                                            flagF=1;
+                                        }, 
+                                    
+                                        error: function () {
+                                            swal("error in Flight Book!", "Try again later!", "error");
+                                        }, 
+                                            })
+                                            
+                                        }
+                                    }
+
+                                    if (Car.length !=0) {
+                         for (let index = 0; index < Car.length; index++) {
+                                    $.ajax({
+                                        url:"http://localhost:3001/cars/",
+                                        type: "POST",
+                                        dataType: "xml", 
+                                        data: Car[index], 
+                                        processData: false,
+                                        contentType: "text/xml; charset=\"utf-8\"",
+                                        success: function (data) {
+                                            flagC=1;
+                                        }, 
+                                    
+                                        error: function () {
+                                            swal("error in Car Book!", "Try again later!", "error");
+                                        }, 
+                                            })
+                                            
+                                        }
+                                    }
+
+                       if (Hotel.length !=0) {        
+                   for (let index = 0; index < Hotel.length; index++) {
+                            $.ajax({
+                                url:"http://localhost:3002/book-room/",
+                                type: "POST",
+                                dataType: "xml", 
+                                data: Hotel[index], 
+                                processData: false,
+                                contentType: "text/xml; charset=\"utf-8\"",
+                                success: function (data) {
+                                    flagC=1;
+                                }, 
+                            
+                                error: function () {
+                                    swal("error in Car Book!", "Try again later!", "error");
+                                }, 
+                                    })
+                                }
+                            }
+
+                             swal({
+                    title: " Reservations have been approved!",
+                    text:" ("+Flight.length+") aircraft have been booked\nAnd ("+Car.length+")  of the car\nAnd ("+Hotel.length+") hotties" ,
+                    icon: "success",
+                    button: "Move to the next service",
+                    })
+                        },
+
+                        error: function () {
+                            swal("There is not enough money to book!", "Try again later!", "error");
+                        }, 
+                            }) 
+                        
+                        });
+
+                        </script>
+        <!-- Footer-->
+        <footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Location-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Location</h4>
+                        <p class="lead mb-0">
+                            2215 John Daniel Drive
+                            <br />
+                            Clark, MO 65243
+                        </p>
+                    </div>
+                    <!-- Footer Social Icons-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Around the Web</h4>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
+                    </div>
+                    <!-- Footer About Text-->
+                    <div class="col-lg-4">
+                        <h4 class="text-uppercase mb-4">About Freelancer</h4>
+                        <p class="lead mb-0">
+                            Freelance is a free to use, MIT licensed Bootstrap theme created by
+                            <a href="http://startbootstrap.com">Start Bootstrap</a>
+                            .
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Copyright Section-->
+        <div class="copyright py-4 text-center text-white">
+            <div class="container"><small>Copyright &copy; Your Website 2022</small></div>
+        </div>
+        <!-- Portfolio Modals-->
+        <!-- Portfolio Modal 1-->
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Log Cabin</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cabin.png" alt="..." />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        Close Window
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 2-->
+        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Tasty Cake</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cake.png" alt="..." />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        Close Window
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 3-->
+        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Circus Tent</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/circus.png" alt="..." />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        Close Window
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 4-->
+        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Controller</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/game.png" alt="..." />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        Close Window
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 5-->
+        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" aria-labelledby="portfolioModal5" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Locked Safe</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/safe.png" alt="..." />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        Close Window
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 6-->
+        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" aria-labelledby="portfolioModal6" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Submarine</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/submarine.png" alt="..." />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        Close Window
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        
+    </body>
+</html>

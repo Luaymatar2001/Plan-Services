@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+  <xs:element name="flights">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="flight">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="price" type="xs:decimal" />
+              <xs:element name="addresses">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="starting-city" type="xs:string" />
+                    <xs:element name="destination" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="period">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="going" type="xs:dateTime" />
+                    <xs:element name="returning" type="xs:dateTime" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="available-passengers-number" type="xs:unsignedByte" />
+              <xs:element name="passenger-type">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="type" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="connecting-cities">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="city" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="airline" type="xs:string" />
+              <xs:element name="flight-type" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

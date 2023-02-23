@@ -1,0 +1,256 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">
+   </script>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script>
+      $(document).ready(function () {
+      
+var soapMessage = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">'+
+  '<soapenv:Header/>'+
+   ' <soapenv:Body>'+
+  
+      '   <credit-card-request>'+
+          '  <card-owner-name>str1234</card-owner-name>'+
+            ' <card-number>12345</card-number>'+
+            ' <card-expiration-date>2012-12-13</card-expiration-date>'+
+            '    <card-cvv>123</card-cvv>'+
+            '      <card-type>Visa</card-type>'+
+            '    </credit-card-request>'+
+         '  </param>'+
+      ' </soapenv:Body>'+
+   '</soapenv:Envelope>';
+   $.ajax({
+    url:"http://localhost:3003/",
+    type: "POST",
+    dataType: "xml", 
+    data: soapMessage, 
+    processData: false,
+    contentType: "text/xml; charset=\"utf-8\"",
+    success: function (data) {
+        console.log(data.body);
+        // $(data).find("car").each(function () {
+        //    $('#output').append('<span id="add_here">'+$(this).find('price').text()+'</span>');
+
+        //         console.log(data);
+        //     })
+           
+    }, 
+
+    error: function () {
+        console.log("ERROR");
+    }, 
+        })  
+      });
+    </script>
+    <title>Document</title>
+
+</head>
+<body>
+
+
+<div class="container mt-5">
+        <div class="card">
+            <h5 class="card-header text-center">Add Cards</h5>
+            <div class="card-body">
+
+                <form role="form" action = "" data-toggle="validator">
+                  
+                    <div class="form-group">
+                        <label>user name</label>
+                        <input type="text" name = "username" class="form-control" data-error="You must have a name." id="username" placeholder="username" >
+                        <!-- Error -->
+                       
+                    </div>
+                    <!-- _________ -->
+                    <div class="form-group">
+                        <label> passport number </label>
+                        <input type="text" name = "passport_number" class="form-control" data-error="You must have a number." id="passport_number" placeholder="passport_number" >
+                        <!-- Error -->
+                     
+                    </div>
+
+                   
+                    
+                    <div class="form-group">
+                        <label> price </label>
+                        <input type="text" name = "price" class="form-control" data-error="You must have a price." id="price" placeholder="price">
+                        <!-- Error -->
+                       
+                    </div>
+
+                 <div class="form-group">
+                        <label> rate code </label>
+                        <input type="text" name = "rate_code" class="form-control" data-error="You must have a rate code." id="rate_code" placeholder="rate code">
+                        <!-- Error -->
+                       
+                    </div>
+                    <div class="form-group">
+                        <label> promotional description </label>
+                        <input type="text" name = "promotional_description" class="form-control" data-error="You must have a promotional description." id="promotional_description" placeholder="promotional description" >
+                        <!-- Error -->
+                  
+                    </div>
+
+                    <div class="form-group">
+                        <label> rate code </label>
+                        <input type="text" name = "rate_code" class="form-control" data-error="You must have a rate code." id="rate_code" placeholder="rate code">
+                        <!-- Error -->
+                       
+                    </div>
+
+                    <div class="form-group">
+                        <label> period rent </label>
+                        <input type="date" name = "rent" class="form-control" data-error="You must have a rent date." id="rent" placeholder="rent">
+                    </div>
+
+                    <div class="form-group">
+                        <label> period return </label>
+                        <input type="date" name = "return" class="form-control" data-error="You must have a return." id="return" placeholder="return">
+                    </div>
+
+                    <div class="form-group">
+                        <label>travel distance type </label>
+                        <input type="text" name = "travel_distance_type" class="form-control" data-error="You must have a travel distance type." id="travel_distance_type" placeholder="travel distance type">
+                    </div>
+
+                    <div class="form-group">
+                        <label>passenger number </label>
+                        <input type="text" name = "passenger_number" class="form-control" data-error="You must have a passenger number." id="passenger_number" placeholder="passenger number">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label> guest reservation type </label>
+                        <input type="text" name = "guest_reservation_type" class="form-control" data-error="You must have a guest reservation type." id="guest_reservation_type" placeholder="guest reservation type">
+                    </div>
+                    
+                    
+                    <div class="form-group">
+                        <label>car type</label>
+                        <input type="text" name = "car_type" class="form-control" data-error="You must have a car type ." id="car_type" placeholder="car type">
+                    </div>
+
+                    <div class="form-group">
+                        <label>special equipment</label>
+                        <input type="text" name = "special_equipment" class="form-control" data-error="You must have a car type ." id="special_equipment" placeholder="special equipment">
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <a href="#table1" type="button" id="buttom1" class="btn btn-primary btn-block">Send</a>
+                        
+                    </div>
+            
+                </form>
+         
+            </div>
+        </div>
+        
+        <section class="page-section mb-0" >
+            <div class="container">
+                <!-- Contact Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Car services</h2>
+                <!-- Icon Divider-->
+            
+            <table style="font-size: large; font-weight: bold;" id="table1" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">price</th>
+                        <th scope="col">rate code</th>
+                        <th scope="col">Promotional description</th>
+                        <th scope="col">Guest reservation type</th>
+                        <th scope="col">period</th>
+                        <th scope="col">Travel distance type</th>
+                        <th scope="col">Passenger number</th>
+                        <th scope="col">car-type</th>
+                        <th scope="col">special equipment</th>
+                     
+                    </tr>
+                  
+                </thead>
+                <tbody id="append2">
+                
+                
+                </tbody>
+              </table>
+            
+        </section>
+    </div>
+
+
+    <script>
+        $('#buttom1').click(function () {
+        
+ var soapMessage = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Header/>'+
+ '<soapenv:Body>'+
+ '<GetAllCategoryFamilies xmlns="http://tempuri.org/" />'+
+ '      <param>'+
+         '<car-rental-request>'+
+            ' <username>'+$('#username').val()+'</username>'+
+            '<passport-number>'+$('#passport_number').val()+'</passport-number>'+
+            ' <price>'+$('#price').val()+'</price>'+
+            '<rate-code>'+$('#rate_code').val()+'</rate-code>'+
+            '<promotional-description>'+$('#promotional_description').val()+'</promotional-description>'+
+            '<guest-reservation-type>'+$('#guest_reservation_type').val()+'</guest-reservation-type>'+
+            ' <period>'+
+                '<rent>'+$('#rent').val()+'</rent>'+
+               '<return>'+$('#return').val()+'</return>'+
+               '</period>'+
+            ' <travel-distance-type>'+$('#travel_distance_type').val()+'</travel-distance-type>'+
+            ' <passenger-number>'+$('#passenger_number').val()+'</passenger-number>'+
+            ' <preferences>'+
+                ' <car-type>'+$('#car_type').val()+'</car-type>'+
+              '<special-equipment>'+$('#special_equipment').val()+'</special-equipment>'+
+           '</preferences>'+
+        '</car-rental-request>'+
+ '</param>'+
+ '</soapenv:Body>'+
+ '</soapenv:Envelope>';
+    $.ajax({
+    url:"http://localhost:3001/cars/",
+    type: "POST",
+    dataType: "xml", 
+    data: soapMessage, 
+    processData: false,
+    contentType: "text/xml; charset=\"utf-8\"",
+    success: function (data) {
+        // console.log(data.body);
+        $(data).find("car").each(function () {
+        
+                                let equipments = $(this).find('special-equipments').eq(0).text();
+                                //   +$(this).find('price').text()+
+                                $('#append2').append('<tr id="append1" style = "">'+
+                                    '  <th scope="row">#</th>'+
+                                    ' <td>'+$(this).find('price').text()+'</td>'+
+                                    ' <td>'+$(this).find('rate-code').text()
+                                        +'</td>'+
+                                     ' <td>'+$(this).find('promotional-description').text()+'</td>'+
+                                     ' <td>'+$(this).find('guest-reservation-type').text()+'</td>'+
+                                     ' <td>'+$(this).find('period').text()+'</td>'+
+                                     ' <td>'+$(this).find('travel-distance-type').text()+'</td>'+
+                                     ' <td>'+$(this).find('passenger-number').text()+'</td>'+
+                                     ' <td>'+$(this).find('car-type').text()+'</td>'+
+                                     ' <td>'+equipments+'</td>'+
+                                     ' </tr>');       
+            })
+           
+    }, 
+
+    error: function () {
+        console.log("ERROR");
+    }, 
+        })
+
+
+    });
+
+</script>
+</body>
+</html>
+

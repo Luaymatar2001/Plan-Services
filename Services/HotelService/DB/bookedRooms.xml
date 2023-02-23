@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reservations>
+  <book>
+    <username>string</username>
+    <passport-number>1897</passport-number>
+  </book>
+  <book>
+    <username>string</username>
+    <passport-number>1897</passport-number>
+    <period>
+      <username>1973-08-08</username>
+      <username>1991-10-08</username>
+    </period>
+  </book>
+  <book>
+    <username>string</username>
+    <passport-number>1897</passport-number>
+    <period>
+      <from>1973-08-08</from>
+      <to>1991-10-08</to>
+    </period>
+  </book>
+  <book>
+    <username>string</username>
+    <passport-number>1897</passport-number>
+    <period>
+      <from>1973-08-08</from>
+      <to>1991-10-08</to>
+    </period>
+    <roomType>Single</roomType>
+    <qualifyingRates>Non refundable rate</qualifyingRates>
+  </book>
+  <book>
+    <username>string</username>
+    <passport-number>1897</passport-number>
+    <period>
+      <from>1973-08-08</from>
+      <to>1991-10-08</to>
+    </period>
+    <roomType>Single</roomType>
+    <qualifyingRates>Non refundable rate</qualifyingRates>
+    <price>1500</price>
+  </book>
+  <book>
+    <username>string</username>
+    <passport-number>1897</passport-number>
+    <price>1500</price>
+    <period>
+      <from>1973-08-08</from>
+      <to>1991-10-08</to>
+    </period>
+    <roomType>Single</roomType>
+    <qualifyingRates>Non refundable rate</qualifyingRates>
+  </book>
+</reservations>

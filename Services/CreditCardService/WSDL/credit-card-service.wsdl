@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions
+  xmlns="http://schemas.xmlsoap.org/wsdl/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  name="creditCardService"
+  targetNamespace="http://www.examples.com/wsdl/creditCardService.wsdl"
+  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+  xmlns:tns="http://www.examples.com/wsdl/creditCardService.wsdl"
+  xmlns:xsd="http://www.w3.org/abdshanino"
+>
+
+  <xsd:types>
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="credit-card-request">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="card-owner-name" type="xs:string" minOccurs="1" maxOccurs="1" />
+            <xs:element name="card-number" type="xs:long" minOccurs="1" maxOccurs="1" />
+            <xs:element name="card-expiration-date" type="xs:date" minOccurs="1" maxOccurs="1" />
+            <xs:element name="card-cvv" minOccurs="1" maxOccurs="1">
+              <xs:simpleType>
+                <xs:restriction base="xs:integer">
+                  <xs:minInclusive value="111" />
+                  <xs:maxInclusive value="999" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element name="card-type" minOccurs="1" maxOccurs="1">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:enumeration value="Visa" />
+                  <xs:enumeration value="Master Card" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element name="balance-deduction" type="xs:double" minOccurs="0" maxOccurs="1" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </xsd:types>
+
+  <message name="card-validation">
+    <part name="param" type="tns:credit-card-request" />
+  </message>
+
+
+  <portType name="creditCardService">
+    <operation name="card-validation">
+      <input message="tns:card-validation" />
+    </operation>
+  </portType>
+
+  <binding name="creditCardServiceSOAP" type="tns:creditCardService">
+    <soap:binding style="document"
+      transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="card-validation">
+      <soap:operation soapAction="card-validation" style="document" />
+      <input>
+        <soap:body
+          encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+          namespace="urn:examples:creditCardService"
+          use="literal" />
+      </input>
+
+      <output>
+        <soap:body
+          encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+          namespace="urn:examples:creditCardService"
+          use="literal" />
+      </output>
+    </operation>
+  </binding>
+
+  <service name="creditCardService">
+    <documentation>WSDL File for creditCardService</documentation>
+    <port binding="tns:creditCardServiceSOAP" name="creditCardServiceSOAP">
+      <soap:address
+        location="http://localhost:3003/card-validation/" />
+    </port>
+  </service>
+</definitions>

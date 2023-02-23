@@ -1,0 +1,127 @@
+<rooms>
+  <hotel-room>
+    <hotel-name>5400</hotel-name>
+    <availability-date>
+      <from>1988-04-22</from>
+      <to>1990-07-20</to>
+    </availability-date>
+    <price>33189600000000.2</price>
+    <qualifying-rates>Family</qualifying-rates>
+    <qualifying-rates>
+      <qualifying-rate>Family</qualifying-rate>
+      <qualifying-rate>Best available</qualifying-rate>
+    </qualifying-rates>
+    <hotels-rooms-types>
+      <room-type>Quad</room-type>
+    </hotels-rooms-types>
+    <hotels-services />
+    <hotel-rate>-28242399999999.8</hotel-rate>
+    <negotiation-code>string</negotiation-code>
+  </hotel-room>
+
+
+  <hotel-room>
+    <hotel-name>5400</hotel-name>
+    <availability-date>
+      <from>1988-04-22</from>
+      <to>1990-07-20</to>
+    </availability-date>
+    <price>33189600000000.2</price>
+    <qualifying-rates>Family</qualifying-rates>
+    <qualifying-rates>
+      <qualifying-rate>Family</qualifying-rate>
+      <qualifying-rate>Best available</qualifying-rate>
+    </qualifying-rates>
+    <hotels-rooms-types>
+      <room-type>Quad</room-type>
+    </hotels-rooms-types>
+    <hotels-services />
+    <hotel-rate>-28242399999999.8</hotel-rate>
+    <negotiation-code>string</negotiation-code>
+  </hotel-room>
+
+
+  <hotel-room>
+    <hotel-name>5400</hotel-name>
+    <availability-date>
+      <from>1988-04-22</from>
+      <to>1990-07-20</to>
+    </availability-date>
+    <price>33189600000000.2</price>
+    <qualifying-rates>Family</qualifying-rates>
+    <qualifying-rates>
+      <qualifying-rate>Family</qualifying-rate>
+      <qualifying-rate>Best available</qualifying-rate>
+    </qualifying-rates>
+    <hotels-rooms-types>
+      <room-type>Quad</room-type>
+    </hotels-rooms-types>
+    <hotels-services />
+    <hotel-rate>-28242399999999.8</hotel-rate>
+    <negotiation-code>string</negotiation-code>
+  </hotel-room>
+
+
+  <hotel-room>
+    <hotel-name>5400</hotel-name>
+    <availability-date>
+      <from>1988-04-22</from>
+      <to>1990-07-20</to>
+    </availability-date>
+    <price>33189600000000.2</price>
+    <qualifying-rates>Family</qualifying-rates>
+    <qualifying-rates>
+      <qualifying-rate>Family</qualifying-rate>
+      <qualifying-rate>Best available</qualifying-rate>
+    </qualifying-rates>
+    <hotels-rooms-types>
+      <room-type>Quad</room-type>
+    </hotels-rooms-types>
+    <hotels-services />
+    <hotel-rate>-28242399999999.8</hotel-rate>
+    <negotiation-code>string</negotiation-code>
+  </hotel-room>
+
+
+  <hotel-room>
+    <hotel-name>5400</hotel-name>
+    <availability-date>
+      <from>1988-04-22</from>
+      <to>1990-07-20</to>
+    </availability-date>
+    <price>33189600000000.2</price>
+    <qualifying-rates>Family</qualifying-rates>
+    <qualifying-rates>
+      <qualifying-rate>Family</qualifying-rate>
+      <qualifying-rate>Best available</qualifying-rate>
+    </qualifying-rates>
+    <hotels-rooms-types>
+      <room-type>Quad</room-type>
+    </hotels-rooms-types>
+    <hotels-services />
+    <hotel-rate>-28242399999999.8</hotel-rate>
+    <negotiation-code>string</negotiation-code>
+  </hotel-room>
+
+
+  <hotel-room>
+    <hotel-name>5400</hotel-name>
+    <availability-date>
+      <from>1988-04-22</from>
+      <to>1990-07-20</to>
+    </availability-date>
+    <price>33189600000000.2</price>
+    <qualifying-rates>Family</qualifying-rates>
+    <qualifying-rates>
+      <qualifying-rate>Family</qualifying-rate>
+      <qualifying-rate>Best available</qualifying-rate>
+    </qualifying-rates>
+    <hotels-rooms-types>
+      <room-type>Quad</room-type>
+    </hotels-rooms-types>
+    <hotels-services />
+    <hotel-rate>-28242399999999.8</hotel-rate>
+    <negotiation-code>string</negotiation-code>
+  </hotel-room>
+
+</rooms>
